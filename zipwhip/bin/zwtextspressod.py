@@ -139,7 +139,8 @@ class App():
 				coffee_maker.force_stop()
 				
 			elif (cmd == "Caffine"):
-					
+                                
+				msg = "I am making you coffee."
 				coffee_maker.makeCoffee(16)
 				
 			# push onto the queue what our last command was, just to have a record
