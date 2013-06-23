@@ -109,13 +109,7 @@ class App():
 			cmd = self.zwmsg.parseMsg(body)
 			self.log.info("Cmd back in main Textspresso loop: " + cmd)
 			
-			if (cmd == "menu"):
-				
-				msg = "Welcome to The Freedom Press. You can send the following commands:\n\nCaffeine"
-				self.zwmsg.sendMsg(addr, msg)
-				self.log.info("Sent msg back")
-				
-				
+	
 			elif (cmd == "halt"):
 				msg = "I hope this means you accidentally sent a message since coffee is awesome."
 				self.zwmsg.sendMsg(addr, msg)
