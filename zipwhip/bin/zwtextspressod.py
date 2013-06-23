@@ -1,19 +1,5 @@
-#!/usr/bin/python -O
-#
-# Zipwhip Textspresso Mini
-#
-# This daemon connects to the Zipwhip network using the configured account
-# from the web interface. That account info is written to /opt/zipwhip/conf/zipwhip.conf
-# This process then watches all of the incoming messages for the exact coffee commands.
-# This daemon also reads the GPIO ports to understand what LED's are turned on
-# in front of the espresso machine to know it's state. It also sends out commands via
-# the GPIO ports to trigger the on/off, coffee, decalcify, and water buttons.
-# The pre-ground and coffee double buttons are not available because they were left
-# as manual touch buttons on the front of the machine to allow for the resetting
-# of the Raspi into Wifi Ad-Hoc mode if the pre-ground button is held down for 10 seconds.
-#
-# To kick off the script, run the following from the python directory:
-#   PYTHONPATH=`pwd` python testdaemon.py start
+#This has been reworked to initialize an existing automatic french press.
+#See code in MakeCoffee.py and coffeetimethreading.py
 
 import pdb
 
@@ -129,17 +115,14 @@ class App():
 				self.zwmsg.sendMsg(addr, msg)
 				self.log.info("Sent msg back")
 				
-			elif (cmd == "help"):
 				
-				msg = "Send the word menu to get the menu for the drinks this machine dispenses."
-				self.zwmsg.sendMsg(addr, msg)
-			elif (cmd == "stop"):
+			elif (cmd == "halt"):
 				msg = "I hope this means you accidentally sent a message since coffee is awesome."
 				self.zwmsg.sendMsg(addr, msg)
 				coffee_maker.force_stop()
                                 print 'done force stopping'
 
-			elif (cmd == "coffee"):
+			elif (cmd == "caffeine"):
 
 				msg = "I am making you a cup of coffee."
 				self.zwmsg.sendMsg(addr, msg)
