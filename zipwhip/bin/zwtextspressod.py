@@ -138,7 +138,7 @@ class App():
 				self.zwmsg.sendMsg(addr, msg)
 				coffee_maker.force_stop()
 				
-			elif (cmd == "caffeine"):
+			elif (cmd == "coffee"):
                                 
 				msg = "I am making you coffee."
 				self.zwmsg.sendMsg(addr, msg)
