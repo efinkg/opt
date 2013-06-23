@@ -139,10 +139,10 @@ class App():
 				coffee_maker.force_stop()
 				
 			elif (cmd == "caffeine"):
-                                
+        
 				msg = "I am making you coffee."
 				self.zwmsg.sendMsg(addr, msg)
-				coffee_maker.makeCoffee(16)
+
 				
 			# push onto the queue what our last command was, just to have a record
 			self.pastcmds.append({"cmd":cmd,"addr":addr,"fname":fname,"lname":lname,"time":time.strftime('%Y-%m-%d %H:%M:%S')})
