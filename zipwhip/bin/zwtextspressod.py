@@ -141,6 +141,7 @@ class App():
 			elif (cmd == "caffine"):
                                 
 				msg = "I am making you coffee."
+				self.zwmsg.sendMsg(addr, msg)
 				coffee_maker.makeCoffee(16)
 				
 			# push onto the queue what our last command was, just to have a record
