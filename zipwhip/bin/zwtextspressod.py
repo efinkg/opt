@@ -140,20 +140,7 @@ class App():
 				
 			elif (cmd == "Caffine"):
 					
-					if (cmd == "Caffeine"):
-						
-						coffee_maker.makeCoffee(16)
-					
-					else:
-						
-						# We get here if vended coffee on first try and had all successes.
-						self.log.info("We're done. Yeah baby. Coffee vended.")
-						# Full success on coffee single!!!!
-						elapsed = int(time.time() - startBrewTime)
-						msgOut2 = "Your coffee is brewed. It took me %s to whip it up for u. Enjoy." % self.zwmsg.humanize_time(elapsed)
-						self.zwmsg.sendMsg(addr, msgOut2)
-						self.stats.logOrder(addr, cmd, fname, lname, body, msgOut, msgOut2)
-				
+				coffee_maker.makeCoffee(16)
 				
 			# push onto the queue what our last command was, just to have a record
 			self.pastcmds.append({"cmd":cmd,"addr":addr,"fname":fname,"lname":lname,"time":time.strftime('%Y-%m-%d %H:%M:%S')})
