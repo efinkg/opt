@@ -32,6 +32,8 @@ import lockfile
 import threading
 from coffeetimethreading import CoffeeMaker
 
+coffee_maker = CoffeeMaker()
+
 # Third party libs
 from daemon import runner
 

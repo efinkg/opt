@@ -22,7 +22,7 @@ class ZwUtil:
 			logger = logging.getLogger("zwutil")
 			logger.setLevel(logging.DEBUG)
 			formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-			handler = logging.FileHandler("/opt/zipwhip/log/zipwhip-textspresso.log")
+			handler = logging.FileHandler("/opt/zipwhip/bin/log/zipwhip-textspresso.log")
 			handler.setFormatter(formatter)
 			logger.addHandler(handler)
 			self.log = logger
