@@ -137,9 +137,8 @@ class App():
 				msg = "I hope this means you accidentally sent a message since coffee is awesome."
 				self.zwmsg.sendMsg(addr, msg)
 
-				
 			elif (cmd == "coffee"):
-        
+
 				msg = "I am making you coffee."
 				self.zwmsg.sendMsg(addr, msg)
 
