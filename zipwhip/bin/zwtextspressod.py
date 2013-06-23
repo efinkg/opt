@@ -136,7 +136,7 @@ class App():
 			elif (cmd == "stop"):
 				msg = "I hope this means you accidentally sent a message since coffee is awesome."
 				self.zwmsg.sendMsg(addr, msg)
-				coffee_maker.force_stop()
+
 				
 			elif (cmd == "coffee"):
         
