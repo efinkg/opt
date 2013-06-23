@@ -136,11 +136,15 @@ class App():
 			elif (cmd == "stop"):
 				msg = "I hope this means you accidentally sent a message since coffee is awesome."
 				self.zwmsg.sendMsg(addr, msg)
+				coffee_maker.force_stop()
+                                print 'done force stopping'
 
 			elif (cmd == "coffee"):
 
-				msg = "I am making you coffee."
+				msg = "I am making you a cup of coffee."
 				self.zwmsg.sendMsg(addr, msg)
+				coffee_maker.makeCoffee(16)
+				print 'Making your coffee.  Like a Boss.'
 
 				
 			# push onto the queue what our last command was, just to have a record
